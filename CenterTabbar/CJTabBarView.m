@@ -135,7 +135,7 @@
         CGFloat left = idx < 2 ? item_width*idx : item_width*(idx+1);
         obj.frame = CGRectMake(left, 0, item_width, CGRectGetHeight(self.frame));
         obj.imageRect = CGRectMake((item_width-24)/2, 5, 24, 24);
-        obj.titleRect = CGRectMake(0, CGRectGetHeight(obj.frame)-15, item_width, 11);
+        obj.titleRect = CGRectMake(0, CGRectGetHeight(obj.frame)-kSafeArea_Bottom-15, item_width, 11);
         obj.titleLabel.font = kFont10;
     }];
     
@@ -143,7 +143,7 @@
     self.centerBtn.frame = CGRectMake((kScreenW-item_width)/2, -imageW/2, item_width, CGRectGetHeight(self.frame)+imageW/2);
     
     self.centerBtn.imageRect = CGRectMake((item_width-imageW)/2, 0, imageW, imageW);
-    self.centerBtn.titleRect = CGRectMake(0, CGRectGetHeight(self.centerBtn.frame)-15, CGRectGetWidth(self.centerBtn.frame), 11);
+    self.centerBtn.titleRect = CGRectMake(0, CGRectGetHeight(self.centerBtn.frame)-kSafeArea_Bottom-15, CGRectGetWidth(self.centerBtn.frame), 11);
     
     if (!_path) {
         CAShapeLayer *layer = [CAShapeLayer new];

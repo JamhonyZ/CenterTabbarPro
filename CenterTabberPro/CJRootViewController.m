@@ -130,7 +130,7 @@
 #pragma mark -- LazyLoad
 - (CJTabBarView *)diy_tabbar{
     if (!_diy_tabbar) {
-        _diy_tabbar = [[CJTabBarView alloc] initWithFrame:self.tabBar.bounds];
+        _diy_tabbar = [[CJTabBarView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kTabBarHeight)];
         [_diy_tabbar setValue:self forKey:@"controller"];
         _diy_tabbar.diy_items = self.items;
     }

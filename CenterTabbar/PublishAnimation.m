@@ -32,7 +32,7 @@
     UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
     [keyWindow addSubview:animateView];
     CGRect rect = [[UIApplication sharedApplication].keyWindow convertRect:view.frame fromView:view.superview];
-    rect.origin.y -= 9;
+    rect.origin.y -= kSafeArea_Bottom;
     animateView.rect = rect;
     
 
